@@ -1,16 +1,17 @@
 package com.company;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
 
-// Escrevendo arquivos
-public class Main {
+
+public class Escrevendo {
 
     public static void main(String[] args)  {
         Scanner teclado = new Scanner(System.in);
 
         try {
-            PrintStream escrever = new PrintStream("saida.txt");
+            PrintStream escrever = new PrintStream(new FileOutputStream("saida.txt", true));
 
             System.out.println("Escreva sua mensagem: ");
             String msg = teclado.nextLine();
